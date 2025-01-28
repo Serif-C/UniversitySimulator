@@ -5,6 +5,7 @@ using UnityEngine;
 public class ObjectPlacement : MonoBehaviour
 {
     private GridManager gridManager;
+    private bool isPlaced = false;
 
     private void Start()
     {
@@ -13,34 +14,35 @@ public class ObjectPlacement : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetMouseButtonDown(0))
+        if (isPlaced) return; // If already placed, stop updating
+
+        // Get the mouse position in world space
+        Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        mousePosition.z = 0;
+
+        // Snap the position to the grid
+        Vector3 snappedPosition = gridManager.SnapToGrid(mousePosition);
+        transform.position = snappedPosition;
+
+        // Get grid coordinates
+        var (x, y) = gridManager.GetGridPosition(snappedPosition);
+
+        // Highlight the tile
+        bool isValid = !gridManager.IsTileOccupied(x, y); // Valid if not occupied
+        gridManager.HighlightTile(snappedPosition, isValid);
+
+        // Place the object when the left mouse button is clicked
+        if (Input.GetMouseButtonDown(0) && isValid)
         {
-            Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            mousePosition.z = 0;
-
-            Vector3 snappedPosition = gridManager.SnapToGrid(mousePosition);
-            transform.position = snappedPosition;
-
-            bool isValid = CheckPlacementValidity(snappedPosition);
-            gridManager.HighlightTile(snappedPosition, isValid);
-
-            if( isValid && Input.GetMouseButtonDown(0))
-            {
-                PlaceObject(snappedPosition);
-            }
+            PlaceObject(snappedPosition, x, y);
         }
     }
 
-    private bool CheckPlacementValidity(Vector3 position)
+    private void PlaceObject(Vector3 position, int x, int y)
     {
-        // Add logic to check if the tile is occupied
-        return true; // Placeholder
-    }
-
-    private void PlaceObject(Vector3 position)
-    {
-        transform.position = position;
-        // Lock this object in place
-        enabled = false;
+        transform.position = position; // Lock the object to the snapped position
+        gridManager.SetTileOccupied(x, y, true); // Mark the tile as occupied
+        isPlaced = true; // Prevent further updates
+        Debug.Log($"Object placed at: {position} on tile ({x}, {y})");
     }
 }
