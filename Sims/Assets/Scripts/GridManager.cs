@@ -11,7 +11,6 @@ public class GridManager : MonoBehaviour
     [SerializeField] GameObject tilePrefab;
     private GameObject[,] tiles;
     private bool[,] occupiedTiles;
-    private (int, int) lastHighlightedTile = (-1, -1);
 
     private void Start()
     {
@@ -44,45 +43,6 @@ public class GridManager : MonoBehaviour
         int gridY = Mathf.RoundToInt(y);
 
         return GetWorldPosition(gridX, gridY);
-    }
-
-    public void HighlightTile(Vector3 worldPosition)
-    {
-        var (x, y) = GetGridPosition(worldPosition);
-
-        if (x >= 0 && y >= 0 && x < gridWidth && y < gridHeight)
-        {
-            // Reset the previously highlighted tile if it's different
-            if (lastHighlightedTile != (-1, -1) && lastHighlightedTile != (x, y))
-            {
-                int lx = lastHighlightedTile.Item1;
-                int ly = lastHighlightedTile.Item2;
-                ResetTileColor(lx, ly);
-            }
-
-            SpriteRenderer renderer = tiles[x, y].GetComponent<SpriteRenderer>();
-
-            // Highlight valid tile as green, occupied tile as red
-            if (IsTileOccupied(x, y))
-                renderer.color = Color.red;
-            else
-                renderer.color = Color.green;
-
-            lastHighlightedTile = (x, y);
-        }
-    }
-
-    public void ResetTileColor(int x, int y)
-    {
-        if (x >= 0 && y >= 0 && x < gridWidth && y < gridHeight)
-        {
-            SpriteRenderer renderer = tiles[x, y].GetComponent<SpriteRenderer>();
-
-            // Reset to default color **even after placing an object**
-            Color color = Color.cyan;
-            color.a = 0.109f;
-            renderer.color = color;
-        }
     }
 
     public Vector3 GetWorldPosition(int x, int y)
