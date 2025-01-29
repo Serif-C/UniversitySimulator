@@ -55,7 +55,7 @@ public class PlaceObjects : MonoBehaviour
     {
         obj.transform.position = position;
         SpriteRenderer renderer = obj.GetComponent<SpriteRenderer>();
-        obj.GetComponent<SpriteRenderer>().sortingOrder = 10;
+        obj.GetComponent<SpriteRenderer>().sortingOrder = 5;
         
         if (gridManager.IsTileOccupied(x, y))
         {
