@@ -18,16 +18,20 @@ public class Movement : MonoBehaviour
         xInput = Input.GetAxisRaw("Horizontal") * moveSpeed;
         yInput = Input.GetAxisRaw("Vertical") * moveSpeed;
 
+        AnimateMovement(xInput, yInput);
+
+        Vector3 movement = new Vector3(xInput, yInput, 0);
+        transform.position += (movement * Time.deltaTime);
+    }
+
+    private void AnimateMovement(float xInput, float yInput)
+    {
         animator.SetFloat("Movement_X", xInput);
         animator.SetFloat("Movement_Y", yInput);
-        
+
         if (xInput != 0 || yInput != 0)
             animator.SetBool("Moving", true);
         else
             animator.SetBool("Moving", false);
-
-        Vector3 movement = new Vector3(xInput, yInput, 0);
-
-        transform.position += (movement * Time.deltaTime);
     }
 }
