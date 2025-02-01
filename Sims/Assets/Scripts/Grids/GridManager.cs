@@ -71,4 +71,29 @@ public class GridManager : MonoBehaviour
         if (x >= 0 && x < gridWidth && y >= 0 && y < gridHeight)
             occupiedTiles[x, y] = isOccupied;
     }
+
+    public bool IsAreaOccupied(int startX, int startY, int width, int height)
+    {
+        for (int x = startX; x < startX + width; x++)
+        {
+            for (int y = startY; y < startY + height; y++)
+            {
+                if (x < 0 || x >= gridWidth || y < 0 || y >= gridHeight || occupiedTiles[x, y])
+                    return true; // If any cell is occupied or out of bounds, return true
+            }
+        }
+        return false;
+    }
+
+    public void SetAreaOccupied(int startX, int startY, int width, int height, bool isOccupied)
+    {
+        for (int x = startX; x < startX + width; x++)
+        {
+            for (int y = startY; y < startY + height; y++)
+            {
+                if (x >= 0 && x < gridWidth && y >= 0 && y < gridHeight)
+                    occupiedTiles[x, y] = isOccupied;
+            }
+        }
+    }
 }
