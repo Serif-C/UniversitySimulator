@@ -627,7 +627,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fbd964865db45f46808422006588354, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  placeAbleObject: {fileID: 5867857270159596994, guid: 8748c07f6673be44a9cf9e6adfecec33, type: 3}
+  placeAbleObject: {fileID: 5867857270159596994, guid: f14860678cbeb04498a8aef42412938f, type: 3}
 --- !u!4 &1469721508
 Transform:
   m_ObjectHideFlags: 0
@@ -660,7 +660,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1703793098
 SpriteRenderer:
   m_ObjectHideFlags: 0

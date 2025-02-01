@@ -85,4 +85,28 @@ public class PlaceObjects : MonoBehaviour
             obj.GetComponentInChildren<SpriteRenderer>().color = Color.green;
         }
     }
+
+    //private void HighlightTileCell(Vector3 position, int startX, int startY)
+    //{
+    //    for (int x = startX; x < startX + sizeX; x++)
+    //    {
+    //        for (int y = startY; y < startY + sizeY; y++)
+    //        {
+    //            if (x >= 0 && x < gridManager.gridWidth && y >= 0 && y < gridManager.gridWidth)
+    //            {
+    //                GameObject tile = gridManager.GetTileAt(x, y);
+    //                if (tile != null)
+    //                {
+    //                    SpriteRenderer renderer = tile.GetComponent<SpriteRenderer>();
+    //                    renderer.sortingOrder = 5;
+
+    //                    if (gridManager.IsAreaOccupied(startX, startY, sizeX, sizeY))
+    //                        renderer.color = Color.red;
+    //                    else
+    //                        renderer.color = Color.green;
+    //                }
+    //            }
+    //        }
+    //    }
+    //}
 }

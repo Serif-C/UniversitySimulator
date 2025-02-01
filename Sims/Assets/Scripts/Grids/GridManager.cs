@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class GridManager : MonoBehaviour
 {
-    [SerializeField] int gridWidth = 10;
-    [SerializeField] int gridHeight = 10;
+     public int gridWidth = 10;
+     public  int gridHeight = 10;
     [SerializeField] float cellSize = 1f;
     private Vector3 originPosition;
     [SerializeField] GameObject tilePrefab;
@@ -95,5 +95,24 @@ public class GridManager : MonoBehaviour
                     occupiedTiles[x, y] = isOccupied;
             }
         }
+    }
+
+    public GameObject GetTileAt(int x, int y)
+    {
+        if (x >= 0 && x < gridWidth && y >= 0 && y < gridHeight)
+            return tiles[x, y];
+        return null;
+    }
+
+    ///////////// Setters and Getters ///////////////
+    
+    public int GetGridWidth()
+    {
+        return gridWidth;
+    }
+
+    public int GridHeight()
+    {
+        return gridHeight;
     }
 }
