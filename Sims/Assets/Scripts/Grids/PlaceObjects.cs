@@ -70,43 +70,33 @@ public class PlaceObjects : MonoBehaviour
 
     }
 
-    private void HighlightTileCell(Vector3 position, int x, int y)
+    private void HighlightTileCell(Vector3 position, int startX, int startY)
     {
-        obj.transform.position = position;
-        SpriteRenderer renderer = obj.GetComponentInChildren<SpriteRenderer>();
-        obj.GetComponentInChildren<SpriteRenderer>().sortingOrder = 5;
+        for (int x = startX; x < startX + sizeX; x++)
+        {
+            for (int y = startY; y < startY + sizeY; y++)
+            {
+                if (x >= 0 && x < gridManager.gridWidth && y >= 0 && y < gridManager.gridWidth)
+                {
+                    GameObject tile = gridManager.GetTileAt(x, y);
+                    if (tile != null)
+                    {
+                        obj.transform.position = position;
 
-        if (gridManager.IsAreaOccupied(x, y, sizeX, sizeY))
-        {
-            obj.GetComponentInChildren<SpriteRenderer>().color = Color.red;
-        }
-        else
-        {
-            obj.GetComponentInChildren<SpriteRenderer>().color = Color.green;
+                        SpriteRenderer[] renderers = obj.GetComponentsInChildren<SpriteRenderer>();
+
+                        foreach (SpriteRenderer renderer in renderers)
+                        {
+                            renderer.sortingOrder = 5;
+
+                            if (gridManager.IsAreaOccupied(startX, startY, sizeX, sizeY))
+                                renderer.color = Color.red;
+                            else
+                                renderer.color = Color.green;
+                        }
+                    }
+                }
+            }
         }
     }
-
-    //private void HighlightTileCell(Vector3 position, int startX, int startY)
-    //{
-    //    for (int x = startX; x < startX + sizeX; x++)
-    //    {
-    //        for (int y = startY; y < startY + sizeY; y++)
-    //        {
-    //            if (x >= 0 && x < gridManager.gridWidth && y >= 0 && y < gridManager.gridWidth)
-    //            {
-    //                GameObject tile = gridManager.GetTileAt(x, y);
-    //                if (tile != null)
-    //                {
-    //                    SpriteRenderer renderer = tile.GetComponent<SpriteRenderer>();
-    //                    renderer.sortingOrder = 5;
-
-    //                    if (gridManager.IsAreaOccupied(startX, startY, sizeX, sizeY))
-    //                        renderer.color = Color.red;
-    //                    else
-    //                        renderer.color = Color.green;
-    //                }
-    //            }
-    //        }
-    //    }
-    //}
 }
