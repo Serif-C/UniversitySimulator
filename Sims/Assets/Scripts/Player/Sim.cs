@@ -48,4 +48,9 @@ public class Sim : MonoBehaviour
     {
         Needs.ModifyNeed("Hunger", foodValue);
     }
+
+    public void Energize(float energyValue)
+    {
+        Needs.ModifyNeed("Energy", energyValue);
+    }
 }
