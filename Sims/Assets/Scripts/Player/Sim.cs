@@ -52,5 +52,6 @@ public class Sim : MonoBehaviour
     public void Energize(float energyValue)
     {
         Needs.ModifyNeed("Energy", energyValue);
+        Debug.Log("Energy + " +  energyValue);
     }
 }
