@@ -924,7 +924,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 0}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 318279798}
+        m_TargetAssemblyTypeName: Sim, Assembly-CSharp
+        m_MethodName: Energize
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 20
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &856830008
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1359,7 +1371,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1469721507
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2604,6 +2616,7 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 519420032}
+  - {fileID: 999605708}
   - {fileID: 619394802}
   - {fileID: 1208581046}
   - {fileID: 900416171}
@@ -2614,4 +2627,3 @@ SceneRoots:
   - {fileID: 1595819722}
   - {fileID: 1944490930}
   - {fileID: 645458851}
-  - {fileID: 999605708}
