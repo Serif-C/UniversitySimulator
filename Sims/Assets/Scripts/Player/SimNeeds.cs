@@ -12,7 +12,7 @@ public class SimNeeds
         Needs = new Dictionary<string, Need>()
         {
             { "Hunger", new Need("Hunger", 100f, 1.2f, sliders["Hunger"]) },
-            { "Energy", new Need("Energy", 100f, 0.8f, sliders["Energy"]) },
+            { "Energy", new Need("Energy", 100f, 1.8f, sliders["Energy"]) },
             { "Bladder", new Need("Bladder", 100f, 1.5f, sliders["Bladder"]) },
             { "Fun", new Need("Fun", 100f, 0.5f, sliders["Fun"]) },
             { "Social", new Need("Social", 100f, 0.7f, sliders["Social"]) },
