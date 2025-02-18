@@ -31,7 +31,7 @@ public class Sim : MonoBehaviour
         };
 
         // Initialize SimNeeds with sliders
-        Needs = new SimNeeds(sliders);
+        Needs = new SimNeeds(sliders, this);
     }
 
     void Update()
@@ -49,9 +49,10 @@ public class Sim : MonoBehaviour
         Needs.ModifyNeed("Hunger", foodValue);
     }
 
-    public void Energize(ref float energyValue)
+    public void Energize(ref float energyValue, ref float duration)
     {
-        Needs.ModifyNeed("Energy", energyValue);
+        //Needs.ModifyNeed("Energy", energyValue);
+        Needs.ModifyNeedOverTime("Energy", energyValue, duration);
         Debug.Log("Energy + " +  energyValue);
     }
 }

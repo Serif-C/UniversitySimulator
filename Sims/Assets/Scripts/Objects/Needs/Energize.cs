@@ -6,6 +6,7 @@ public class Energize : MonoBehaviour
 {
     [SerializeField] private float energyValue;
     [SerializeField] private HighlightObjects highlightedObject;
+    [SerializeField] private float duration;
 
     private Sim sim;
 
@@ -25,7 +26,7 @@ public class Energize : MonoBehaviour
         {
             if (Input.GetMouseButtonDown(0))
             {
-                sim.Energize(ref energyValue);
+                sim.Energize(ref energyValue, ref duration);
             }
         }
 

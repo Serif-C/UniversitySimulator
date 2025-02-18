@@ -6,9 +6,12 @@ using UnityEngine.UI;
 public class SimNeeds
 {
     public Dictionary<string, Need> Needs { get; private set; }
+    private MonoBehaviour coroutineRunner;
 
-    public SimNeeds(Dictionary<string, Slider> sliders)
+    public SimNeeds(Dictionary<string, Slider> sliders, MonoBehaviour coroutineRunner)
     {
+        this.coroutineRunner = coroutineRunner;
+
         Needs = new Dictionary<string, Need>()
         {
             { "Hunger", new Need("Hunger", 100f, 1.2f, sliders["Hunger"]) },
@@ -35,6 +38,14 @@ public class SimNeeds
         if (Needs.ContainsKey(needName))
         {
             Needs[needName].ModifyNeed(amount);
+        }
+    }
+
+    public void ModifyNeedOverTime(string needName, float amount, float duration)
+    {
+        if (Needs.ContainsKey(needName) && coroutineRunner != null)
+        {
+            coroutineRunner.StartCoroutine(Needs[needName].ModifyNeedOverTime(amount, duration, this.coroutineRunner));
         }
     }
 

@@ -43,6 +43,31 @@ public class Need
             needSlider.value = currentValue; // Update UI
     }
 
+    public IEnumerator ModifyNeedOverTime(float amount, float duration, MonoBehaviour monoBehaviour)
+    {
+        float startValue = currentValue;
+        float targetValue = Mathf.Clamp(this.currentValue + amount, minValue, maxValue);
+        float elapsedTime = 0f;
+
+        while (elapsedTime < duration)
+        {
+            elapsedTime += Time.deltaTime;
+            currentValue = Mathf.Lerp(startValue, targetValue, elapsedTime / duration);
+
+            if(needSlider != null)
+            {
+                needSlider.value = currentValue;
+            }
+
+            yield return null; // wait for next frame
+        }
+
+        // Ensures the exact value is set at the end
+        currentValue = targetValue;
+        if (needSlider != null)
+            needSlider.value = currentValue;
+    }
+
     public bool IsCritical(float threshold = 20f)
     {
         return this.currentValue <= threshold;
