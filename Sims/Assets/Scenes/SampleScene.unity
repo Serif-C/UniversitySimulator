@@ -365,8 +365,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -763628743
+  m_SortingLayer: 1
   m_SortingOrder: 3
   m_Sprite: {fileID: 1090217281897295437, guid: 31ea8428626570747a5d7cd2c12c06c6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -489,7 +489,7 @@ GameObject:
   - component: {fileID: 335514023}
   - component: {fileID: 335514024}
   m_Layer: 0
-  m_Name: Sprite_sheet_15
+  m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -550,11 +550,11 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1101615007
+  m_SortingLayer: 2
   m_SortingOrder: 5
   m_Sprite: {fileID: -15142942, guid: b0978ecbbc101f14c99eafff7ddf3402, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.5176471}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.83137256}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -747,7 +747,7 @@ GameObject:
   - component: {fileID: 531177650}
   - component: {fileID: 531177651}
   m_Layer: 0
-  m_Name: Sprite_sheet_14
+  m_Name: Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -808,8 +808,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1101615007
+  m_SortingLayer: 2
   m_SortingOrder: 5
   m_Sprite: {fileID: -1883814871, guid: b0978ecbbc101f14c99eafff7ddf3402, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -833,7 +833,7 @@ GameObject:
   - component: {fileID: 589156966}
   - component: {fileID: 589156967}
   m_Layer: 0
-  m_Name: Sprite_sheet_8
+  m_Name: Book_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -894,8 +894,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -763628743
+  m_SortingLayer: 1
   m_SortingOrder: 3
   m_Sprite: {fileID: 1715537060, guid: b0978ecbbc101f14c99eafff7ddf3402, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -919,7 +919,7 @@ GameObject:
   - component: {fileID: 602512405}
   - component: {fileID: 602512406}
   m_Layer: 0
-  m_Name: Sprite_sheet_1
+  m_Name: Shelf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -980,9 +980,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingLayerID: -763628743
+  m_SortingLayer: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: -1096770247, guid: b0978ecbbc101f14c99eafff7ddf3402, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1139,8 +1139,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -763628743
+  m_SortingLayer: 1
   m_SortingOrder: 3
   m_Sprite: {fileID: 5167690650097798016, guid: 684e0080c072cf546ae6bbcef2d6d5f5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1444,7 +1444,7 @@ GameObject:
   - component: {fileID: 907910007}
   - component: {fileID: 907910008}
   m_Layer: 0
-  m_Name: Sprite_sheet_4
+  m_Name: Desk_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1505,9 +1505,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 4
+  m_SortingLayerID: -763628743
+  m_SortingLayer: 1
+  m_SortingOrder: 3
   m_Sprite: {fileID: -1324718844, guid: b0978ecbbc101f14c99eafff7ddf3402, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1688,7 +1688,7 @@ GameObject:
   - component: {fileID: 1239643781}
   - component: {fileID: 1239643782}
   m_Layer: 0
-  m_Name: Sprite_sheet_16
+  m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1751,7 +1751,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 0
   m_Sprite: {fileID: 117541154, guid: b0978ecbbc101f14c99eafff7ddf3402, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1925,7 +1925,7 @@ GameObject:
   - component: {fileID: 1540388845}
   - component: {fileID: 1540388846}
   m_Layer: 0
-  m_Name: Sprite_sheet_11
+  m_Name: Computer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1986,9 +1986,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingLayerID: -763628743
+  m_SortingLayer: 1
+  m_SortingOrder: 4
   m_Sprite: {fileID: -717821886, guid: b0978ecbbc101f14c99eafff7ddf3402, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2340,7 +2340,7 @@ GameObject:
   - component: {fileID: 1875192360}
   - component: {fileID: 1875192361}
   m_Layer: 0
-  m_Name: Sprite_sheet_5
+  m_Name: Book_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2401,8 +2401,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -763628743
+  m_SortingLayer: 1
   m_SortingOrder: 5
   m_Sprite: {fileID: 1158347260, guid: b0978ecbbc101f14c99eafff7ddf3402, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -2510,7 +2510,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: a81cbbd7f4e55804d9bfc05204a220fb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2991,7 +2991,7 @@ GameObject:
   - component: {fileID: 2078204051}
   - component: {fileID: 2078204052}
   m_Layer: 0
-  m_Name: Sprite_sheet_3
+  m_Name: Deks_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3052,9 +3052,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 4
+  m_SortingLayerID: -763628743
+  m_SortingLayer: 1
+  m_SortingOrder: 3
   m_Sprite: {fileID: -153813288, guid: b0978ecbbc101f14c99eafff7ddf3402, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
