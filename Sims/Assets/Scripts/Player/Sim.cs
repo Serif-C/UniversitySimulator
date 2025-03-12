@@ -16,6 +16,9 @@ public class Sim : MonoBehaviour
     public Slider ComfortSlider;
     public Slider EnvironmentSlider;
 
+    private bool isTakingShower = false;
+    private bool isTakingBath = false;
+
     void Start()
     {
         var sliders = new Dictionary<string, Slider>
@@ -54,5 +57,36 @@ public class Sim : MonoBehaviour
         //Needs.ModifyNeed("Energy", energyValue);
         Needs.ModifyNeedOverTime("Energy", energyValue, duration);
         Debug.Log("Energy + " +  energyValue);
+    }
+
+    public void TakeShower(ref float hygieneValue, ref float duration)
+    {
+        Needs.ModifyNeedOverTime("Hygiene", hygieneValue, duration);
+        isTakingShower = true;
+        isTakingBath = false;
+    }
+
+    public void TakeBath(ref float hygieneValue, ref float energyValue,ref float duration)
+    {
+        Needs.ModifyNeedOverTime("Hygiene", hygieneValue, duration);
+        Needs.ModifyNeedOverTime("Energy", energyValue, duration);
+        isTakingBath = true;
+        isTakingShower = false;
+    }
+
+    public void BladderRelief(ref float bladderValue, ref float duration)
+    {
+        Needs.ModifyNeedOverTime("Bladder", bladderValue, duration);
+    }
+
+    // Setters & Getters
+    public bool IsTakingShower()
+    {
+        return isTakingShower;
+    }
+
+    public bool IsTakingBath()
+    {
+        return isTakingBath;
     }
 }

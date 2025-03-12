@@ -4,15 +4,30 @@ using UnityEngine;
 
 public class Bladder : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private float bladderValue;
+    [SerializeField] private HighlightObjects highlightedObject;
+    [SerializeField] private float duration;
+
+    private Sim sim;
+
+    private void Start()
     {
-        
+        sim = FindFirstObjectByType<Sim>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        if ((highlightedObject.IsHighlighted()))
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+                RelieveBladder();
+            }
+        }
+    }
+
+    public void RelieveBladder()
+    {
+        sim.BladderRelief(ref bladderValue, ref duration);
     }
 }
