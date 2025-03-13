@@ -72,4 +72,9 @@ public class Need
     {
         return this.currentValue <= threshold;
     }
+
+    public float GetCurrentValue()
+    {
+        return this.currentValue;
+    }
 }
